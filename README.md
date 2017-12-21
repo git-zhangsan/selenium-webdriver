@@ -12,79 +12,79 @@
 
 ## Instance Methods
 
-	+ doubleTap( elem ) 
++  doubleTap( elem ) 
 
-	> 描述：双击一个元素。
+>  描述：双击一个元素。
 
-	> 参数: elem 要双击的元素
-
-
-	+ flick( speed )
-
-	> 描述：在屏幕上的任意位置以速度xspeed和yspeed轻弹。
-
-	> 参数：speed	{xspeed: number, yspeed: number} 每个方向的速度，以像素/秒为单位。
+>  参数: elem 要双击的元素
 
 
-	+ flickElement( elem, offset, speed ) 
++  flick( speed )
 
-	> 描述：从elem开始，以指定的速度移动x和y。
+>  描述：在屏幕上的任意位置以速度xspeed和yspeed轻弹。
 
-	> 参数：elem 轻弹开始的元素 offset {x: number, y: number}  speed 要弹开的偏移量 以每秒像素为单位的速度。
-
-
-	+ longPress( elem )
-
-	> 描述：长按一个元素。
-
-	> 参数：elem 长按元素对象
+>  参数：speed	{xspeed: number, yspeed: number} 每个方向的速度，以像素/秒为单位。
 
 
-	+ move( location )
++  flickElement( elem, offset, speed ) 
 
-	> 描述：将持有的触摸移到指定的位置
+>  描述：从elem开始，以指定的速度移动x和y。
 
-	> 参数：location {x: number, y: number} 移动到的位置
-
-
-	+ perform()
-
-	> 描述：执行这个动作序列
+>  参数：elem 轻弹开始的元素 offset {x: number, y: number}  speed 要弹开的偏移量 以每秒像素为单位的速度。
 
 
-	+ release( location ) 
++  longPress( elem )
 
-	> 描述：在指定位置释放保持的触摸。
-	
-	> 参数：location	{x: number, y: number} 要发布的位置
+>  描述：长按一个元素。
 
-
-	+ scroll( offset )
-
-	> 描述：按给定的偏移量滚动触摸屏
-
-	> 参数：offset	{x: number, y: number} 要滚动到的偏移量
+>  参数：elem 长按元素对象
 
 
-	+ scrollFromElement( elem, offset )
++  move( location )
 
-	> 描述：滚动触摸屏，从elem开始，移动指定的偏移量。
+>  描述：将持有的触摸移到指定的位置
 
-	> 参数：elem 滚动开始的元素。 offset	{x: number, y: number} 要滚动到的偏移量
-
-
-	+ tap( elem ) 
-
-	> 描述：点击一个元素
-
-	> 参数：elem 要点击的元素。
+>  参数：location {x: number, y: number} 移动到的位置
 
 
-	+ tapAndHold( location )
++  perform()
 
-	> 描述：在给定的位置触摸。
+>  描述：执行这个动作序列
 
-	> 参数：location	{x: number, y: number} 要触及的位置
+
++  release( location ) 
+
+>  描述：在指定位置释放保持的触摸。
+
+>  参数：location	{x: number, y: number} 要发布的位置
+
+
++  scroll( offset )
+
+>  描述：按给定的偏移量滚动触摸屏
+
+>  参数：offset	{x: number, y: number} 要滚动到的偏移量
+
+
++  scrollFromElement( elem, offset )
+
+>  描述：滚动触摸屏，从elem开始，移动指定的偏移量。
+
+>  参数：elem 滚动开始的元素。 offset	{x: number, y: number} 要滚动到的偏移量
+
+
++  tap( elem ) 
+
+>  描述：点击一个元素
+
+>  参数：elem 要点击的元素。
+
+
++  tapAndHold( location )
+
+>  描述：在给定的位置触摸。
+
+>  参数：location	{x: number, y: number} 要触及的位置
 
 
 
