@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+	<title>Selenium Example</title>
+	<link rel="stylesheet" href="">
+	<style>
+	.droptarget {
+	    float: left; 
+	    width: 100px; 
+	    height: 35px;
+	    margin: 15px;
+	    padding: 10px;
+	    border: 1px solid #aaaaaa;
+	}
+	</style>
+</head>
+<body>
+	<h1>This is Selenium-Webdriver Example</h1>
+	<p>
+		<button type="button" id="act1"> Click Event</button>
+	</p>
+
+	<p>
+		<button type="button" id="act2"> Click Event</button>
+	</p>
+
+	<p>在两个矩形框中来回拖动 p 元素:</p>
+	<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">拖动我!</p>
+	</div>
+	<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<p style="clear:both;"><strong>注意：</strong>Internet Explorer 8 及更早 IE 版本或 Safari 5.1 及更早版本的浏览器不支持 drag 事件。</p>
+	<p id="demo"></p>
+	<br/>
+	<p><input type="text" id="act3" size="50"></p>
+	<br/>
+	<p><input type="text" id="act5" size="50"></p>
+	<br/>
+	<br/>
+	<p><input type="text" id="act4" size="50"></p>
+	
+
+</body>
+<script>
+		document.querySelector('#act1').onclick = function(e){
+			e.target.innerText = 'Clicked once'
+		}
+		let i = 0;
+		document.querySelector('#act2').onclick = function(e){
+			i++;
+			e.target.innerText = 'Clicked once '+i
+		}
+
+		function dragStart(event) {
+		    event.dataTransfer.setData("Text", event.target.id);
+		}
+		function dragging(event) {
+		    document.getElementById("demo").innerHTML = " p 元素正在拖动";
+		}
+		function allowDrop(event) {
+		    event.preventDefault();
+		}
+		function drop(event) {
+		    event.preventDefault();
+		    var data = event.dataTransfer.getData("Text");
+		    event.target.appendChild(document.getElementById(data));
+		    document.getElementById("demo").innerHTML = "p 元素已被拖动";
+		}
+		document.onkeydown = function(e){
+			document.querySelector('#act3').value = 'keyDown'
+		}
+
+		document.onkeyup = function(e){
+			document.querySelector('#act5').value = 'keyUp'
+		}
+	</script>
+</html>
