@@ -2,8 +2,13 @@
 * @Author: zhanghuiming
 * @Date:   2017-12-22 10:34:53
 * @Last Modified by:   zhanghuiming
-* @Last Modified time: 2017-12-22 11:43:51
+* @Last Modified time: 2017-12-26 14:28:53
 */
+
+let chai = require('chai'),
+    expect = require('chai').expect;
+var fetch = require('node-fetch');
+
 describe("Inner Suite 1", function(){
   
     before(function(){
@@ -50,21 +55,14 @@ describe("Inner Suite 1", function(){
  
     it("Test-2", function(){
  
-        // test Code
-        // assertions
-        // 
-     	var promise;
-	    promise = new Promise(function(resolve, reject){
-	        setTimeout(function(){
-	 
-	            console.log("Timeout");
-	            resolve();
-	 
-	        }, 3000);
-	 
-	    });
-	    // mocha will wait for the promise to be resolved before exiting
-	    return promise.then; 
+       return fetch('https://api.github.com')
+    .then(function(res) {
+      return res.json();
+    }).then(function(json) {
+      expect(json).to.be.an('object');
+    });
+     	
+	    
         
     });
  

@@ -2,7 +2,7 @@
 * @Author: zhanghuiming
 * @Date:   2017-12-20 16:44:14
 * @Last Modified by:   zhanghuiming
-* @Last Modified time: 2017-12-21 14:16:41
+* @Last Modified time: 2017-12-22 13:27:13
 */
 const {Builder, By, Key, promise, until} = require('selenium-webdriver');
 const {Options} = require('selenium-webdriver/chrome');
@@ -64,7 +64,7 @@ promise.consume(function* () {
 
 		})
 
-  //   	groupWrap.findElements({'className':'groupWrapBorderNone'}).then(function(item){
+  		//groupWrap.findElements({'className':'groupWrapBorderNone'}).then(function(item){
 	   	
 		// 	driver.touchActions()
 		// 	.tap(item[0])
@@ -87,71 +87,6 @@ promise.consume(function* () {
     	// .scrollFromElement(driver.findElement(By.id('detailStoryyListInfinite')),{x:0,y:500})
     	// .perform();
     })
-
-    
-
-  //     let eleWrap = driver.findElement({'className':'storyGroupListWrap'});
-
-	 //   eleWrap.findElements({'className':'groupWrapBorderNone'}).then(function(item){
-	   	
-		// 	driver.touchActions()
-		// 	.tap(item[1])
-		// 	.perform();
-		// })
-
-  //   .then(function(){
-  //   	  let eleWrap = driver.findElement({'className':'storyGroupListWrap'});
-
-	 //   eleWrap.findElements({'className':'groupWrapBorderNone'}).then(function(item){
-	   	
-		// 	driver.touchActions()
-		// 	.tap(item[1])
-		// 	.perform();
-		// })
-  //   }).then(function(){
-  //   	let groupWrap = driver.findElement({'className':'groupWrap'});
-  //   	groupWrap.findElements({'className':'detailStoryListCon'}).then(function(item){
-	   	
-		// 	driver.touchActions()
-		// 	.tap(item[0])
-		// 	.perform();
-		// })
-
-  //   })
-
-  
-
-    	
-    
-
-    
-
-    
-
-
-   // yield driver.touchActions()
-   // .tap(driver.getText())
-   // .perform();   
-   //  driver.touchActions()
-   // .tapAndHold({x: 0, y: 500})
-   // .move({x: 300, y: 500})
-   // .scroll({x:0,y:1000})
-   // .perform();
-
-
-  	
-
-   // yield driver.touchActions()
-   // .tap(driver.findElements(driver.findElements(By.className('itemRow'))))
-   // .perform();
-
-   // driver.findElement({className: 'homeSearch'}).tap();
-   //  yield driver.findElement({id: 'floatBall'}).then(function(el) {
-		 //   return el.click();
-		 // });
-    	
-    //yield driver.wait(driver.findElement(By.id('searchContent')).sendKeys('webdriver', Key.RETURN),1000);
-    //yield driver.wait(until.titleIs('webdriver - Google Search'), 1000);
   } finally {
     //yield driver && driver.quit();
   }
